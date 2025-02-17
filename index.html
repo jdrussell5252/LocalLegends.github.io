@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="footerStyle.css">        
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+
+        <video class = "video-background" autoplay muted loop playsinline>
+            <source src="LLAV.mp4" type="video/mp4">
+        </video>
+
+<!---Tabbed Navigation---------------------------------------------------------------------------------------------->
+        <div class="w3-bar">
+            <!-- Left Tab -->
+            <div class="nav-left dropdown"> 
+                <button class = "dropbtn">Discover</button>
+                <div class = "dropdown-content">
+                    <a href = 'Calendar.html'>Calendar</a>
+                    <a href = '#'>Genres</a>
+                    <a href = '#'>Charts</a>
+                </div>
+            </div>
+      
+            <!-- Logo in the middle -->
+            <div class="nav-center">
+                <a href="AboutUs.html" class="text-center">
+                    <img src="tempLogo.png" alt="Logo" class="logo">
+                </a>
+            </div>
+      
+            <!-- Right Tab -->
+            <div class="nav-right dropdown">
+                <button class = "dropbtn">Create</button>
+                <div class = "dropdown-content">
+                    <a href = '#'>Upload</a>
+                    <a href = '#'>Other Media</a>
+                </div>
+            </div>
+
+<!--Login------------------------------------------------------------------------------------------------------->
+            <div class="nav-login">
+                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+                <div id="id01" class="modal">
+  
+                    <form class="modal-content animate" action="/action_page.php" method="post">
+                        <div class="imgcontainer">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            <img src="BlankAvatar.png" alt="Avatar" class="avatar">
+                        </div>
+
+                        <div class="container">
+                            <label for="uname"><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" name="uname" required>
+
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" required>
+        
+                            <button type="submit">Login</button>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                            </label>
+                        </div>
+
+                        <div class="container" style="background-color:#f1f1f1">
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                            <span class="psw">Forgot <a href="#">password?</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>    
+        </div>
+<!---End of Tabbed Navigation---------------------------------------------------------------------------------------------->        
+        <script>
+            // Get the modal
+            var modal = document.getElementById('id01');
+
+            // Function to open the modal and disable scrolling
+            function openModal() {
+                modal.style.display = 'block';
+                document.documentElement.style.overflow = 'hidden';  // Disable scrolling on html
+                document.body.style.overflow = 'hidden';  // Disable scrolling on html
+            }
+
+            // Function to close the modal and re-enable scrolling
+            function closeModal() {
+                modal.style.display = 'none';
+                document.documentElement.style.overflow = 'auto'; // enable scrolling
+            }
+
+            // When the user clicks the login button
+            document.querySelector(".nav-login button").onclick = openModal;
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    closeModal();
+                }
+            };
+
+            // When the user clicks the close button (×)
+            document.querySelector(".close").onclick = closeModal;
+
+            // When the user clicks the cancel button (Cancel)
+            document.querySelector(".cancelbtn").onclick = closeModal;
+        </script>
+<!--End of Login------------------------------------------------------------------------------------------------------->
+
+<!--Search Bar------------------------------------------------------------------------------------------------------>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <div class = "search-container">
+                        <div class="text-container">
+                            <p>Find Local Performers</p>
+                            <p>Near You!</p>
+                        </div>
+                        <form action="/action_page.php">
+                            <input type="text" placeholder="Search.." \name="search">
+                            <button type="submit"><i class="fa fa-search"></i>Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+        </div>
+<!--End of Search Bar------------------------------------------------------------------------------------------------------>
+
+<!--Cards------------------------------------------------------------------------------------------------------>
+
+        <h2 class="title">Charts Top 50</h2>
+        <div class="scroll-container">
+            <div class="chart-container">
+                <div class="chart-card">
+                    <img src="cardTest.png" alt="New & Hot">
+                    <h3>New & Hot</h3>
+                    <p>Music Charts</p>
+                </div>
+                <div class="chart-card">
+                    <img src="cardTest2.png" alt="Hip Hop">
+                    <h3>Hip Hop</h3>
+                    <p>Music Charts</p>
+                </div>
+                <div class="chart-card">
+                    <img src="cardTest.png" alt="Country">
+                    <h3>Country</h3>
+                    <p>Music Charts</p>
+                </div>
+                <div class="chart-card">
+                    <img src="cardTest2.png" alt="Pop">
+                    <h3>Pop</h3>
+                    <p>Music Charts</p>
+                </div>
+                <div class="chart-card">
+                    <img src="cardTest.png" alt="Latin">
+                    <h3>Latin</h3>
+                    <p>Music Charts</p>
+                </div>
+                <div class="chart-card">
+                    <img src="cardTest2.png" alt="New & Hot">
+                    <h3>New & Hot</h3>
+                    <p>Music Charts</p>
+                </div>
+                <div class="chart-card">
+                    <img src="cardTest.png" alt="Hip Hop">
+                    <h3>Hip Hop</h3>
+                    <p>Music Charts</p>
+                </div>
+                <div class="chart-card">
+                    <img src="cardTest2.png" alt="Country">
+                    <h3>Country</h3>
+                    <p>Music Charts</p>
+                </div>
+                <div class="chart-card">
+                    <img src="cardTest.png" alt="Pop">
+                    <h3>Pop</h3>
+                    <p>Music Charts</p>
+                </div>
+                <div class="chart-card">
+                    <img src="cardTest2.png" alt="Latin">
+                    <h3>Latin</h3>
+                    <p>Music Charts</p>
+                </div>
+            </div>
+            <div class="scroll-arrow" onclick="scrollRight()">&#8594;</div>
+            <!--NOT WORKING-->
+            <div class="scroll-left-arrow" onclick="scrollLeft()">&#8592;</div>
+        </div>
+
+        <h2 class="title2">Trending Now</h2>
+        <div class="chart-container">
+            <div class="chart-card">
+                <img src="cardTest.png" alt="New & Hot">
+                <h3>New & Hot</h3>
+                <p>Music Charts</p>
+            </div>
+            <div class="chart-card">
+                <img src="cardTest2.png" alt="Hip Hop">
+                <h3>Hip Hop</h3>
+                <p>Music Charts</p>
+            </div>
+            <div class="chart-card">
+                <img src="cardTest.png" alt="Country">
+                <h3>Country</h3>
+                <p>Music Charts</p>
+            </div>
+            <div class="chart-card">
+                <img src="cardTest2.png" alt="Pop">
+                <h3>Pop</h3>
+                <p>Music Charts</p>
+            </div>
+            <div class="chart-card">
+                <img src="cardTest.png" alt="Latin">
+                <h3>Latin</h3>
+                <p>Music Charts</p>
+            </div>
+            <div class="chart-card">
+                <img src="cardTest2.png" alt="New & Hot">
+                <h3>New & Hot</h3>
+                <p>Music Charts</p>
+            </div>
+            <div class="chart-card">
+                <img src="cardTest.png" alt="Hip Hop">
+                <h3>Hip Hop</h3>
+                <p>Music Charts</p>
+            </div>
+            <div class="chart-card">
+                <img src="cardTest2.png" alt="Country">
+                <h3>Country</h3>
+                <p>Music Charts</p>
+            </div>
+            <div class="chart-card">
+                <img src="cardTest.png" alt="Pop">
+                <h3>Pop</h3>
+                <p>Music Charts</p>
+            </div>
+            <div class="chart-card">
+                <img src="cardTest2.png" alt="Latin">
+                <h3>Latin</h3>
+                <p>Music Charts</p>
+            </div>
+        </div>
+        <script>
+            function scrollRight() {
+                const container = document.querySelector('.chart-container');
+                container.scrollBy({
+                    left: 300, // Adjust the number of pixels you want to scroll
+                    behavior: 'smooth'
+                });
+            }
+
+            function scrollLeft() {
+                const container = document.querySelector('.chart-container');
+                container.scrollBy({
+                    left: -300, // Negative value to scroll left
+                    behavior: 'smooth'
+                });
+            }
+        </script>    
+<!--End of Cards------------------------------------------------------------------------------------------------------>
+
+<!--Footer------------------------------------------------------------------------------------------------------>
+        <footer class="footer">
+            <div class="footer-section">
+                <h3>Address</h3>
+                <p>300 Vista Dr, Nacogdoches, TX 75965</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Nacogdoches Office: (936) 715-8633</p>
+                <p>Email: jakerussell8633@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i>
+                </div>
+            </div>
+        </footer>
+<!--End of Footer------------------------------------------------------------------------------------------------------>
+    </body>
+</html>

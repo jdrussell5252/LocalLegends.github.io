@@ -1,0 +1,31 @@
+/*----------------------------------------Footer--------------------------------------------------*/
+.footer {
+    display: flex;
+    background-color: #222; /* Dark background */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-section:nth-child(1),
+.footer-section:nth-child(2) {
+    border-right: 2px solid white;
+}
+
+.footer-section:nth-child(3) {
+    border-right: none;
+}
+
+/* Optional: Style for social icons */
+.social-icons i {
+    font-size: 40px;
+    margin: 0 10px;
+}
+/*----------------------------------------End of Footer--------------------------------------------------*/

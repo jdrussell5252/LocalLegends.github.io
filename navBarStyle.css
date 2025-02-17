@@ -1,0 +1,225 @@
+/*Navigation Bar:------------------------------------------------------------------------------------*/
+.logo {
+    position: absolute;  /* Allows the logo to overlay the bar */
+    max-width: 150px;  /* Control the width of the logo */
+    height: 100px;  /* Independent height, unaffected by the navbar */
+    top: 0px;
+    background-color: #121212; padding: 5px 5px 5px 5px;
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow effect on hover */
+}
+
+/* Navigation bar styling */
+.w3-bar {
+    display: flex;
+    height: 80px;
+    justify-content: center; /* Distribute left and right tabs */
+    align-items: center; /* Vertically center tabs */
+    background-color: #222; color: white;
+    overflow: visible;
+}
+
+/* Right tabs container */
+.nav-right {
+    display: flex;
+    font-size: small;
+    align-items: center;
+    padding-left: 150px;
+}
+
+/* Left tabs container */
+.nav-left {
+    display: flex;
+    font-size: small;
+    align-items: center;
+}
+
+/* Make sure logo is centered in between */
+.nav-center {
+    display: flex;
+    justify-content: space-between;
+    background-color: #222; padding: 5px 5px 5px 5px;
+    z-index: 1;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #8c8a8a}
+  
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-left .dropdown-content {
+    right: 0; /* Aligns it to the left of the parent dropdown */
+}
+
+.w3-button {
+    background-color: red;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+/*End of Navigation Bar:------------------------------------------------------------------------------------*/
+
+/*Login:------------------------------------------------------------------------------------*/
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+  
+/* Set a style for all buttons */
+button,.dropbtn {
+    background-color: red;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;   
+    width: 100%;
+}
+  
+button:hover {
+    opacity: 0.8;
+}
+  
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+  
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+  
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+  
+.container {
+    padding: 16px;
+}
+  
+span.psw {
+    float: right;
+    padding-top: 16px;
+    color: black;
+}
+  
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+  
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+  
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+  
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+  
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+  
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+/* Position the login button to the top right */
+.nav-login {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+/* Change color of "Remember me" */
+.container label {
+    color: black; /* Dark purple */
+    font-weight: bold;
+}
+/*End of Login:------------------------------------------------------------------------------------*/

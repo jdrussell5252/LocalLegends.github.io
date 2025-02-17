@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="aboutUsCss.css">
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="footerStyle.css">
+    </head>
+    <body>
+<!---Tabbed Navigation---------------------------------------------------------------------------------------------->
+        <div class="w3-bar">
+            <!-- Left Tab -->
+            <div class="nav-left"> 
+                <a href="Index.html" class = "w3-button">Home</a>
+            </div>
+            
+          
+            <!-- Logo in the middle -->
+            <div class="nav-center">
+                <a href="AboutUs.html" class="text-center">
+                    <img src="tempLogo.png" alt="Logo" class="logo">
+                </a>
+            </div>
+          
+            <!-- Right Tab -->
+            <div class="nav-right dropdown">
+                <button class = "dropbtn">Create</button>
+                <div class = "dropdown-content">
+                    <a href = '#'>Upload</a>
+                    <a href = '#'>Other Media</a>
+                </div>
+            </div>  
+        </div>
+
+<!--Login------------------------------------------------------------------------------------------------------->
+            <div class="nav-login">
+                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+                <div id="id01" class="modal">
+
+                    <form class="modal-content animate" action="/action_page.php" method="post">
+                        <div class="imgcontainer">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            <img src="BlankAvatar.png" alt="Avatar" class="avatar">
+                        </div>
+
+                        <div class="container">
+                            <label for="uname"><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" name="uname" required>
+
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" required>
+
+                            <button type="submit">Login</button>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                            </label>
+                        </div>
+
+                        <div class="container" style="background-color:#f1f1f1">
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                            <span class="psw">Forgot <a href="#">password?</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>    
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById('id01');
+
+            // Function to open the modal and disable scrolling
+            function openModal() {
+                modal.style.display = 'block';
+                document.documentElement.style.overflow = 'hidden';  // Disable scrolling on html
+                document.body.style.overflow = 'hidden';  // Disable scrolling on html
+            }
+
+            // Function to close the modal and re-enable scrolling
+            function closeModal() {
+                modal.style.display = 'none';
+                document.documentElement.style.overflow = 'auto'; // enable scrolling
+            }
+
+            // When the user clicks the login button
+            document.querySelector(".nav-login button").onclick = openModal;
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    closeModal();
+                }
+            };
+
+            // When the user clicks the close button (×)
+            document.querySelector(".close").onclick = closeModal;
+
+            // When the user clicks the cancel button (Cancel)
+            document.querySelector(".cancelbtn").onclick = closeModal;
+        </script>
+<!--End of Login------------------------------------------------------------------------------------------------------->
+<!---End of Tabbed Navigation---------------------------------------------------------------------------------------------->
+
+<!---Mission Statement---------------------------------------------------------------------------------------------->
+        <div class="container mt-5">
+            <div class="row align-items-center">
+                <div class="col-sm-4">
+                    <div class="d-flex align-items-center">
+                        <h3 class="me-4 text"><strong>What Is Our Mission?</strong></h3> <!-- Added me-3 for spacing -->
+                        <div>
+                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                            <p class = "text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                        </div>
+                    </div>
+                </div>
+  
+                <!-- Empty column for spacing -->
+                <div class="col-sm-4"></div>
+          
+                <!-- Group image with a card design -->
+                <div class="col-sm-4">
+                    <div class="profile-card w3-card-4">
+                        <img src="temp4.jpg" alt="Group Picture" style="width: 100%;"></img>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!---End of Mission Statement---------------------------------------------------------------------------------------------->
+
+<!---"Meet Our Team"---------------------------------------------------------------------------------------------->
+        <!-- Empty column for spacing -->
+        <div class="container mt-2 fade-in">
+            <div class="row">
+                <div class="col-sm-4"></div>
+  
+                <!-- Heading encouraging joining -->
+                <div class="col-sm-4">
+                    <p style = "margin-top: 50px; text-align: center; font-size: 30px; color: white;"><strong>Meet Our Team!</strong></p>
+                </div>
+          
+                <!-- Empty column for spacing -->
+                <div class="col-sm-4"></div>
+            </div>
+        </div>        
+<!---"Meet Our Team"---------------------------------------------------------------------------------------------->
+
+<!---Profile Cards---------------------------------------------------------------------------------------------->
+<div class="profile-container">
+
+    <!-- Profile Card 1 -->
+    <div class="profile-card">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <a href="https://github.com/SFA-Courses/program04-in-fa24-jdrussell5252" target="_blank">
+                        <img src="temp4.jpg" alt="Project 1">
+                    </a>
+                    <div class="w3-container">
+                        <h4><strong>Tristen Timmons</strong></h4>
+                    </div>
+                </div>
+                <!-- Back Side of Card -->
+                <div class="flip-card-back">
+                    <p>Designer, Developer</p> 
+                    <p>We love that guy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Card 2 -->
+    <div class="profile-card">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <a href="https://github.com/SFA-Courses/program04-in-fa24-jdrussell5252" target="_blank">
+                        <img src="temp4.jpg" alt="Project 1">
+                    </a>
+                    <div class="w3-container">
+                        <h4><strong>Jake Russell</strong></h4>
+                    </div>
+                </div>
+                <!-- Back Side of Card -->
+                <div class="flip-card-back">
+                    <p>Director, Designer, Developer</p> 
+                    <p>We love that guy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Card 3 -->
+    <div class="profile-card">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <a href="https://github.com/SFA-Courses/program04-in-fa24-jdrussell5252" target="_blank">
+                        <img src="temp4.jpg" alt="Project 1">
+                    </a>
+                    <div class="w3-container">
+                        <h4><strong>Christian Pepper</strong></h4>
+                    </div>
+                </div>
+                <!-- Back Side of Card -->
+                <div class="flip-card-back">
+                    <p>Designer, Developer</p> 
+                    <p>We love that guy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>          
+
+
+<!---End of Profile Cards---------------------------------------------------------------------------------------------->
+
+<!--Footer------------------------------------------------------------------------------------------------------>
+        <footer class="footer">
+            <div class="footer-section">
+                <h3>Address</h3>
+                <p>300 Vista Dr, Nacogdoches, TX 75965</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Nacogdoches Office: (936) 715-8633</p>
+                <p>Email: jakerussell8633@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i>
+                </div>
+            </div>
+        </footer>
+<!--End of Footer------------------------------------------------------------------------------------------------------>        
+    </body>
+</html>
